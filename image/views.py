@@ -98,7 +98,7 @@ def saveSignup(request):
             face_component = img[y:y+h, x:x+w]
         if face_component is not None:
             cv2.imwrite('image/static/profiles/'+username+'.png',face_component)
-            db_connection = pymysql.connect(host='127.0.0.1',port = 3306,user = 'root', password = '12345', database = 'facial_login',charset='utf8')
+            db_connection = pymysql.connect(host='127.0.0.1',port = 3306,user = 'root', password = '1234', database = 'facial_login',charset='utf8')
             db_cursor = db_connection.cursor()
             values = (username,password,contact, email, address)
             student_sql_query = "INSERT INTO register(username,password,contact,email,address) VALUES('"+username+"','"+password+"','"+contact+"','"+email+"','"+address+"')"
@@ -120,7 +120,7 @@ def saveSignup(request):
 #     output+='<th><font size=3 color=black>Area Name</font></th>'
 #     output+='<th><font size=3 color=black>Image</font></th>'
 #     output+='<th><font size=3 color=black>Cast Vote Here</font></th></tr>'
-#     con = pymysql.connect(host='127.0.0.1',port = 3306,user = 'root', password = '12345', database = 'facial_login',charset='utf8')
+#     con = pymysql.connect(host='127.0.0.1',port = 3306,user = 'root', password = '1234', database = 'facial_login',charset='utf8')
 #     with con:
 #         cur = con.cursor()
 #         cur.execute("select * FROM addparty")
@@ -146,7 +146,7 @@ def UserLogin(request):
         username = request.POST.get('username', False)
         password = request.POST.get('password', False)
         status = 'none'
-        con = pymysql.connect(host='127.0.0.1',port = 3306,user = 'root', password = '12345', database = 'facial_login',charset='utf8')
+        con = pymysql.connect(host='127.0.0.1',port = 3306,user = 'root', password = '1234', database = 'facial_login',charset='utf8')
         with con:
             cur = con.cursor()
             cur.execute("select * FROM register")

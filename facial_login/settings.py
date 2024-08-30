@@ -57,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(r'D:\image_authentication\facial_login\image','templates'),
+            os.path.join(r'C:\Users\anshu\Downloads\facial_login\Facial-Authentication-django\image','templates'),
             ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -84,7 +84,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': '12345',
+        'PASSWORD': '1234',
 	'OPTIONS': {
           'autocommit': True,
         },     
@@ -126,7 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

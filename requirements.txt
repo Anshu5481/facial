@@ -1,7 +1,9 @@
 pillow
 django-crispy-forms
 mysqlclient
-opencv-python
+
 blockchain
 pyaes
 pbkdf2
+ opencv-contrib-python
+ cryptography
